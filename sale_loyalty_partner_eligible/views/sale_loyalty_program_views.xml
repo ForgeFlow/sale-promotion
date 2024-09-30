@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="loyalty_program_view_form">
+        <field name="model">loyalty.program</field>
+        <field name="inherit_id" ref="loyalty.loyalty_program_view_form" />
+        <field name="arch" type="xml">
+            <field name="available_on" position="before">
+                <field name="partner_ids" widget="many2many_tags" />
+            </field>
+        </field>
+    </record>
+
+        <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">Marketing fields</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='sales_purchases']/group[1]">
+                <group name="marketing" string="Marketing">
+                    <field name="loyalty_program_ids" widget="many2many_tags" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

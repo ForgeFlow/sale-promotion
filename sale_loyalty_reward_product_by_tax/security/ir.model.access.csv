@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_loyalty_product_reward,access_loyalty_product_reward,model_loyalty_reward_tax_product,base.group_user,0,0,0,0
+access_loyalty_product_reward_manager,Loyalty Reward Tax Products (Manager),model_loyalty_reward_tax_product,sales_team.group_sale_manager,1,1,1,1

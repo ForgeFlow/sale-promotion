@@ -1,0 +1,1 @@
+This allows to set different reward products by tax.
